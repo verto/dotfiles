@@ -61,6 +61,8 @@ Bundle 'briandoll/change-inside-surroundings.vim'
 Bundle 'Raimondi/delimitMate'
  "split multiline and single line
 Bundle 'AndrewRadev/splitjoin.vim'
+" commentary
+Bundle 'tpope/vim-commentary'
 
 " colorschema
 Bundle 'morhetz/gruvbox'
