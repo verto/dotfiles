@@ -3,7 +3,7 @@ require 'fileutils'
 
 desc "Yay! mount my env"
 task :install do
-  ["vim", "zsh", "tmux"].each do |task|
+  ["vim", "zsh", "tmux", "fonts"].each do |task|
     Rake::Task[task].execute
   end
 end
@@ -60,6 +60,16 @@ task :tmux do
   puts "install tmux conf"
   run %{
     ln -nfs $HOME/dev/dotfiles/tmux.conf $HOME/.tmux.conf
+  }
+end
+
+desc "fonts"
+task :fonts do
+  puts "install fonts"
+  run %{
+    sudo cp $HOME/dev/dotfiles/fonts/*.ttf /usr/share/fonts/TTF/
+    sudo cp $HOME/dev/dotfiles/fonts/*.otf /usr/share/fonts/OTF/
+    fc-cache
   }
 end
 
