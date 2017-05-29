@@ -5,7 +5,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Bundle 'tpope/vim-fugitive'
-Bundle 'derekwyatt/vim-scala'
 Bundle 'kien/ctrlp.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'rking/ag.vim'
@@ -32,6 +31,9 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'honza/vim-snippets'
  "syntax checking
 Bundle 'scrooloose/syntastic'
+
+" scala
+Bundle 'derekwyatt/vim-scala'
 
 " search
  "print numbers of matches

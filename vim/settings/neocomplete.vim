@@ -14,7 +14,7 @@ let g:neocomplete#sources#dictionary#dictionaries = {
     \ 'default' : '',
     \ 'vimshell' : $HOME.'/.vimshell_hist',
     \ 'scheme' : $HOME.'/.gosh_completions',
-    \ 'scala' : '/vmspace/user/dotfiles/vim/dict/scala.dict'
+    \ 'scala' : $HOME.'/.vim/dict/scala.dict'
         \ }
 
 " Define keyword.
