@@ -62,6 +62,9 @@ Bundle 'Raimondi/delimitMate'
  "split multiline and single line
 Bundle 'AndrewRadev/splitjoin.vim'
 
+" colorschema
+Bundle 'morhetz/gruvbox'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
