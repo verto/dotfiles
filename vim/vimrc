@@ -1,0 +1,96 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" ================ General Config ====================
+"
+set number                      "Line numbers are good
+set backspace=indent,eol,start  "Allow backspace in insert mode
+set history=1000                "Store lots of :cmdline history
+set showcmd                     "Show incomplete cmds down the bottom
+set showmode                    "Show current mode down the bottom
+set gcr=a:blinkon0              "Disable cursor blink
+set visualbell                  "No sounds
+set autoread                    "Reload files changed outside vim
+set cursorline
+
+" This makes vim act like all other editors, buffers can
+" exist in the background without being in a window.
+" http://items.sjbach.com/319/configuring-vim-right
+set hidden
+
+" =============== Vundle Initialization ===============
+" " This loads all the plugins specified in ~/.vim/vundles.vim
+" " Use Vundle plugin to manage all other plugins
+if filereadable(expand("~/.vim/vundle.vim"))
+  source ~/.vim/vundle.vim
+endif
+
+" ================ Turn Off Swap Files ==============
+"
+set noswapfile
+set nobackup
+set nowb
+
+" ================ Indentation ======================
+"
+set autoindent
+set smartindent
+set smarttab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set expandtab
+
+filetype plugin on
+filetype indent on
+
+
+
+
+" Display tabs and trailing spaces visually
+" set list listchars=tab:\ \ ,trail:·
+"
+set nowrap       "Don't wrap lines
+set linebreak    "Wrap lines at convenient points
+
+" ================ Scrolling ========================
+"
+set scrolloff=8         "Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
+
+
+let g:ctrlp_map = ',t'
+nnoremap <silent> \t :NERDTreeFind<CR>
+nnoremap <silent> ,i :JavaImport<CR>
+nnoremap <silent> ,t :CtrlP<CR>
+nnoremap <silent> ,i :JavaImport<CR>
+map ,jt :CtrlP src/test<CR>
+map ,js :CtrlP src/main/scala<CR>
+map ,jr :CtrlP src/main/resources<CR>
+map ,jj :CtrlP src/main/java<CR>
+map ,ja :CtrlP assets<CR>
+
+syntax enable
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
+set clipboard=unnamedplus
+
+
+so ~/.vim/settings.vim
+
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*/target/*,*/node_modules/*,*/bower_components/*
+set wildignore+=*/dist/*
+
+"let g:EclimCompletionMethod = 'omnifunc'
+"
+"if !exists('g:neocomplcache_force_omni_patterns')
+"    let g:neocomplcache_force_omni_patterns = {}
+"endif
+"let g:neocomplcache_force_omni_patterns.java = '\k\.\k*'
+"let g:neocomplcache_force_omni_patterns.scala = '\k\.\k*'

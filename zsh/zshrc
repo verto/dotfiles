@@ -1,0 +1,32 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+for config_file (~/dev/dotfiles/zsh/*.zsh) source $config_file
+
+  #export PATH="$HOME/.rbenv/bin:$PATH"
+  #eval "$(rbenv init -)"
+
+# added by travis gem
+[ -f /home/verto/.travis/travis.sh ] && source /home/verto/.travis/travis.sh
+
+#tmux attach &> /dev/null
+
+#if [[ ! $TERM =~ screen ]]; then
+#    exec tmux
+#fi
+#
+export SCALA_HOME=/home/verto/dev/scala
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export PATH=$PATH:$SCALA_HOME/bin
