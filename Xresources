@@ -8,7 +8,7 @@ Xft.rgba: rgb
 
 XTerm.termName: xterm-256color
 XTerm*renderFont: true
-XTerm*faceName: Fantasque Sans Mono
+XTerm*faceName: DejaVu Sans Mono for Powerline
 XTerm*faceSize: 12
 
 XTerm.vt100.saveLines: 6096
