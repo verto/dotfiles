@@ -1,0 +1,17 @@
+Xft.dpi: 133
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+XTerm.termName: xterm-256color
+XTerm*renderFont: true
+XTerm*faceName: DejaVu Sans Mono for Powerline
+XTerm*faceSize: 12
+
+XTerm.vt100.saveLines: 6096
+XTerm.vt100.scrollBar: true
+XTerm.vt100.scrollbar.width: 8
+XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)

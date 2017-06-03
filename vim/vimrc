@@ -73,7 +73,7 @@ map ,ja :CtrlP assets<CR>
 
 syntax enable
 set background=dark
-colorscheme gruvbox
+colorscheme hybrid
 let g:solarized_termcolors=256
 set clipboard=unnamedplus
 

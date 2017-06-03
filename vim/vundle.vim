@@ -66,6 +66,7 @@ Bundle 'tpope/vim-commentary'
 
 " colorschema
 Bundle 'morhetz/gruvbox'
+Bundle 'w0ng/vim-hybrid'
 
 
 call vundle#end()            " required
