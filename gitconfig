@@ -6,41 +6,42 @@
     user = verto
 
 [color]
-        ui = auto
+    ui = auto
 
 [color "branch"]
-        current = yellow reverse
-        local = yellow
-        remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 
 [color "diff"]
-        meta = yellow bold
-        frag = magenta bold
-        old = red bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
 	new = green bold
 
 [color "status"]
-        added = yellow
-        changed = green
-        untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 
 [alias]
-        st = status
-        ci = commit
-        br = branch
-        co = checkout
-        df = diff
-        lg = log -p
-	update = !sh -c \"git fetch && git rebase origin/$(git symbolic-ref HEAD | sed -e 's,.*/\\(.*\\),\\1,')\"
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+    update = !sh -c \"git fetch && git rebase origin/$(git symbolic-ref HEAD | sed -e 's,.*/\\(.*\\),\\1,')\"
+    reset-hard = !sh -c \"git reset origin/$(git symbolic-ref HEAD | sed -e 's,.*/\\(.*\\),\\1,') --hard\"
 
 [merge]
-        tool = mymeld
-        conflictstyle = diff3
+    tool = mymeld
+    conflictstyle = diff3
 
 [emerge]
-        tool = tortoisemerge
+    tool = tortoisemerge
 [mergetool "mymeld"]
-        cmd = meld --diff \"$BASE\" \"$LOCAL\" --diff \"$BASE\" \"$REMOTE\" --diff \"$LOCAL\" \"$BASE\" \"$REMOTE\" \"$MERGED\"
- 
+    cmd = meld --diff \"$BASE\" \"$LOCAL\" --diff \"$BASE\" \"$REMOTE\" --diff \"$LOCAL\" \"$BASE\" \"$REMOTE\" \"$MERGED\"
+
 [core]
-	editor = vim
+    editor = vim
