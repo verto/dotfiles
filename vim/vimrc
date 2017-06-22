@@ -59,24 +59,15 @@ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-
-let g:ctrlp_map = ',t'
 nnoremap <silent> \t :NERDTreeFind<CR>
 nnoremap <silent> ,i :JavaImport<CR>
-nnoremap <silent> ,t :CtrlP<CR>
 nnoremap <silent> ,i :JavaImport<CR>
-map ,jt :CtrlP src/test<CR>
-map ,js :CtrlP src/main/scala<CR>
-map ,jr :CtrlP src/main/resources<CR>
-map ,jj :CtrlP src/main/java<CR>
-map ,ja :CtrlP assets<CR>
 
 syntax enable
 set background=dark
 colorscheme hybrid
 let g:solarized_termcolors=256
 set clipboard=unnamedplus
-
 
 so ~/.vim/settings.vim
 

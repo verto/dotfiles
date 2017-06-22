@@ -35,6 +35,10 @@ Bundle 'scrooloose/syntastic'
 " scala
 Bundle 'derekwyatt/vim-scala'
 
+" ruby/rails
+Bundle 'tpope/vim-rails'
+Bundle 'vim-ruby/vim-ruby'
+
 " search
  "print numbers of matches
 Bundle 'vim-scripts/IndexedSearch'
