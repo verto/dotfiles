@@ -76,6 +76,7 @@ Bundle 'w0ng/vim-hybrid'
 " text-object
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'kana/vim-textobj-indent'
 
 
 call vundle#end()            " required
