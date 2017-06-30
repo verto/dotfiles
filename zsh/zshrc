@@ -13,8 +13,8 @@ fi
 # Customize to your needs...
 for config_file (~/dev/dotfiles/zsh/*.zsh) source $config_file
 
-  #export PATH="$HOME/.rbenv/bin:$PATH"
-  #eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # added by travis gem
 [ -f /home/verto/.travis/travis.sh ] && source /home/verto/.travis/travis.sh
