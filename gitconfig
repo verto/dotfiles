@@ -45,3 +45,4 @@
 
 [core]
     editor = vim
+	excludesfile = ~/dev/dotfiles/.gitignore_global

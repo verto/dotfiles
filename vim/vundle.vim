@@ -73,6 +73,10 @@ Bundle 'tpope/vim-commentary'
 Bundle 'morhetz/gruvbox'
 Bundle 'w0ng/vim-hybrid'
 
+" text-object
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
