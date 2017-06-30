@@ -13,6 +13,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'Shougo/neocomplete.vim'
 Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'itchyny/lightline.vim'
+Bundle 'tacahiroy/ctrlp-funky'
 
 " git
 " gitk for vim
