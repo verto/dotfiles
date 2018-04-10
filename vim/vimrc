@@ -59,7 +59,8 @@ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-nnoremap <silent> \t :NERDTreeFind<CR>
+nnoremap <silent> \t :NERDTree<CR>
+nnoremap <silent> \T :NERDTreeFind<CR>
 nnoremap <silent> ,i :JavaImport<CR>
 nnoremap <silent> ,i :JavaImport<CR>
 
@@ -67,13 +68,13 @@ syntax enable
 set background=dark
 colorscheme hybrid
 let g:solarized_termcolors=256
-set clipboard=unnamedplus
+set clipboard^=unnamedplus,unnamed
 
 so ~/.vim/settings.vim
 
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*/target/*,*/node_modules/*,*/bower_components/*
 set wildignore+=*/dist/*

@@ -5,10 +5,10 @@ nnoremap <silent> ,t :CtrlP<CR>
 nnoremap <silent> ,b :CtrlPBuffer<cr>
 
 " Cmd-Shift-P to clear the cache
-nnoremap <silent> <D-P> :ClearCtrlPCache<cr>
+nnoremap <silent> <C-P> :ClearCtrlPCache<cr>
 
 " Additional mapping for function search
-nnoremap <silent> \f :CtrlPFunky<cr>
+nnoremap <silent> <C-f> :CtrlPFunky<cr>
 
 map ,js :CtrlP src/main/scala<CR>
 map ,jr :CtrlP src/main/resources<CR>

@@ -10,7 +10,8 @@ Bundle 'ivalkeen/vim-ctrlp-tjump'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'rking/ag.vim'
 Bundle 'scrooloose/nerdtree'
-Bundle 'Shougo/neocomplete.vim'
+" Bundle 'Shougo/neocomplete.vim'
+Bundle 'Shougo/deoplete.nvim'
 Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'itchyny/lightline.vim'
 Bundle 'tacahiroy/ctrlp-funky'
@@ -79,6 +80,9 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'kana/vim-textobj-indent'
 
+Bundle 'fatih/vim-go'
+Bundle 'sebdah/vim-delve'
+Bundle 'jodosha/vim-godebug'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

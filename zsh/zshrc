@@ -26,7 +26,12 @@ eval "$(rbenv init -)"
 #fi
 #
 export SCALA_HOME=/home/verto/dev/scala
+export VIM_HOME=/home/verto/dev/vim
+export JAVA_HOME=/home/verto/dev/jdk1.8.0_161
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
-export PATH=$PATH:$SCALA_HOME/bin
+export PATH=$VIM_HOME/bin:$PATH:$SCALA_HOME/bin:$JAVA_HOME/bin
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin:$HOME/dev/jet
+export GOPATH=/home/verto/dev/projects/go
+export PATH=$PATH:$GOPATH/bin

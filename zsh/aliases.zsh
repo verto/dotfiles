@@ -75,3 +75,4 @@ alias sclp='sbt clean package'
 
 # fix network bug on suspend https://bbs.archlinux.org/viewtopic.php?id=234725
 alias fix-internet="sudo modprobe -r r8169 && sleep 10 && sudo modprobe r8169"
+alias vim="nvim"
