@@ -1,23 +1,23 @@
-let g:ctrlp_map = ',t'
-nnoremap <silent> ,t :CtrlP<CR>
+" let g:ctrlp_map = ',t'
+" nnoremap <silent> ,t :CtrlP<CR>
 
-" Additional mapping for buffer search
-nnoremap <silent> ,b :CtrlPBuffer<cr>
+" " Additional mapping for buffer search
+" nnoremap <silent> ,b :CtrlPBuffer<cr>
 
-" Cmd-Shift-P to clear the cache
-nnoremap <silent> <C-P> :ClearCtrlPCache<cr>
+" " Cmd-Shift-P to clear the cache
+" nnoremap <silent> <C-P> :ClearCtrlPCache<cr>
 
-" Additional mapping for function search
-nnoremap <silent> <C-f> :CtrlPFunky<cr>
+" " Additional mapping for function search
+" nnoremap <silent> <C-f> :CtrlPFunky<cr>
 
-map ,js :CtrlP src/main/scala<CR>
-map ,jr :CtrlP src/main/resources<CR>
-map ,jj :CtrlP src/main/java<CR>
-map ,ja :CtrlP assets<CR>
+" map ,js :CtrlP src/main/scala<CR>
+" map ,jr :CtrlP src/main/resources<CR>
+" map ,jj :CtrlP src/main/java<CR>
+" map ,ja :CtrlP assets<CR>
 
-map ,ja :CtrlP app/assets<CR>
-map ,jm :CtrlP app/models<CR>
-map ,jc :CtrlP app/controllers<CR>
-map ,jv :CtrlP app/views<CR>
-map ,jj :CtrlP app/assets/javascripts<CR>
-map ,jt :CtrlP test<CR>
+" map ,ja :CtrlP app/assets<CR>
+" map ,jm :CtrlP app/models<CR>
+" map ,jc :CtrlP app/controllers<CR>
+" map ,jv :CtrlP app/views<CR>
+" map ,jj :CtrlP app/assets/javascripts<CR>
+" map ,jt :CtrlP test<CR>

@@ -35,3 +35,5 @@ export PATH=$VIM_HOME/bin:$PATH:$SCALA_HOME/bin:$JAVA_HOME/bin
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin:$HOME/dev/jet
 export GOPATH=/home/verto/dev/projects/go
 export PATH=$PATH:$GOPATH/bin
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
