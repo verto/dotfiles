@@ -13,8 +13,10 @@ fi
 # Customize to your needs...
 for config_file (~/dev/dotfiles/zsh/*.zsh) source $config_file
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [[ -s "$HOME/.rbenv" ]]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
 
 # added by travis gem
 [ -f /home/verto/.travis/travis.sh ] && source /home/verto/.travis/travis.sh
@@ -34,6 +36,15 @@ export LANGUAGE=en_US.UTF-8
 export PATH=$VIM_HOME/bin:$PATH:$SCALA_HOME/bin:$JAVA_HOME/bin
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin:$HOME/dev/jet
 export GOPATH=/home/verto/dev/projects/go
-export PATH=$PATH:$GOPATH/bin
+export VERTO_SCRIPTS=/home/verto/dev/apps
+export PASS_HOME=/home/verto/dev/op
+export CARGO_BIN=/home/verto/.cargo/bin
+export FLUTTER_DIR=/home/verto/dev/flutter/flutter
+
+export PATH=$PATH:$GOPATH/bin:$PASS_HOME:$CARGO_BIN:$VERTO_SCRIPTS:$FLUTTER_DIR/bin
+export DASHT_DOCSETS_DIR=~/.local/share/Zeal/Zeal/docsets
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

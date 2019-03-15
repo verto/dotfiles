@@ -9,6 +9,13 @@ alias gshw='git show'
 alias gshow='git show'
 alias gi='vim .gitignore'
 alias gcm='git ci -m'
+
+# fzf functions ~/.zsh/git.zsh
+alias gct='fbr'
+alias gcc='fcoc'
+alias gccp='fcoc_preview'
+alias gsc='fshow_preview'
+
 alias gcim='git ci -m'
 alias gci='git ci'
 alias gco='git co'
@@ -76,3 +83,5 @@ alias sclp='sbt clean package'
 # fix network bug on suspend https://bbs.archlinux.org/viewtopic.php?id=234725
 alias fix-internet="sudo modprobe -r r8169 && sleep 10 && sudo modprobe r8169"
 alias vim="nvim"
+
+alias xterm='xterm -e "~/dev/dotfiles/xicons.sh;zsh"'

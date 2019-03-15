@@ -1,4 +1,4 @@
-Xft.dpi: 120
+Xft.dpi: 130
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintfull
@@ -10,8 +10,12 @@ XTerm.termName: xterm-256color
 XTerm*renderFont: true
 XTerm*faceName: DejaVu Sans Mono for Powerline
 XTerm*faceSize: 12
+XTerm*iconPixmap: /home/verto/dev/dotfiles/icons/code.xbm
 
 XTerm.vt100.saveLines: 6096
 XTerm.vt100.scrollBar: true
 XTerm.vt100.scrollbar.width: 8
 XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+XTerm.vt100.translations: #override \n\
+        Ctrl Shift <Key> +: larger-vt-font() \n\
+        Ctrl Shift <Key> -: smaller-vt-font()
