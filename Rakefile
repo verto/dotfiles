@@ -63,6 +63,23 @@ task :tmux do
   }
 end
 
+desc "x config"
+task :x do
+  puts "install x configs"
+  run %{
+    ln -nfs $HOME/dev/dotfiles/Xresources.hybird $HOME/.Xresources
+    ln -nfs $HOME/dev/dotfiles/xinitrc $HOME/.xinitrc
+  }
+end
+
+desc "gitconfig"
+task :git do
+  puts "install git configs"
+  run %{
+    ln -nfs $HOME/dev/dotfiles/gitconfig $HOME/.gitconfig
+  }
+end
+
 desc "fonts"
 task :fonts do
   puts "install fonts"
