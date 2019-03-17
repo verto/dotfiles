@@ -1,5 +1,5 @@
 let g:lightline = {
-            \ 'colorschema': 'solarized',
+            \ 'colorscheme': 'hybrid',
             \ 'active': {
             \   'left': [ [ 'mode', 'paste' ],
             \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
@@ -18,7 +18,7 @@ function! MyReadonly()
         return ""
     elseif &readonly
         return " "
-    else
+   else
         return ""
     endif
 endfunction

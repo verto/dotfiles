@@ -48,7 +48,7 @@
     cmd = meld --diff \"$BASE\" \"$LOCAL\" --diff \"$BASE\" \"$REMOTE\" --diff \"$LOCAL\" \"$BASE\" \"$REMOTE\" \"$MERGED\"
 
 [core]
-    editor = vim
+    editor = nvim
 	excludesfile = ~/dev/dotfiles/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
