@@ -108,11 +108,18 @@ Plug 'honza/vim-snippets'
  Plug 'will133/vim-dirdiff'
  Plug 'vim-scripts/AutoTag.git'
 
+ Plug 'elzr/vim-json'
+ Plug 'pangloss/vim-javascript'
+
  " typescript support
- Plug 'neovim/node-host', { 'for': 'typescript', 'do': 'npm install -g neovim' }
- Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
- Plug 'mhartington/nvim-typescript', { 'for': 'typescript', 'do': './install.sh'}
+ " Plug 'neovim/node-host', { 'for': 'typescript', 'do': 'npm install -g neovim' }
+ " Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
+ " Plug 'mhartington/nvim-typescript', { 'for': 'typescript', 'do': './install.sh'}
  " For Denite features
  Plug 'Shougo/denite.nvim', { 'for': 'typescript' }
+
+
+ " rust
+ Plug 'rust-lang/rust.vim'
 
  call plug#end()

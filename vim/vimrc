@@ -55,6 +55,7 @@ set linebreak    "Wrap lines at convenient points
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
+set foldlevel=99
 
 nnoremap <silent> \t :NERDTree<CR>
 nnoremap <silent> \T :NERDTreeFind<CR>

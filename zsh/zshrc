@@ -48,7 +48,7 @@ echo "[rbenv] $TIMEDIFF"
 #
 export SCALA_HOME=/home/verto/dev/scala
 export VIM_HOME=/home/verto/dev/vim
-export JAVA_HOME=/home/verto/dev/jdk1.8.0_161
+export JAVA_HOME=/home/verto/dev/jdk
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8

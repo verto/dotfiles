@@ -11,7 +11,7 @@ XTerm*renderFont: true
 XTerm*scaleHeight: 1
 ! XTerm*faceName: DejaVu Sans Mono for Powerline
 XTerm*faceName: Source Code Pro
-XTerm*faceSize: 13
+XTerm*faceSize: 12
 XTerm*iconPixmap: /home/verto/dev/dotfiles/icons/code.xbm
 XTerm*selectToClipboard: true
 

@@ -12,6 +12,14 @@ fbr() {
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s/^origin\///")
 }
 
+fbr_del() {
+  local branches branch
+  branches=$(git for-each-ref --count=30 --sort=-committerdate refs/{heads,remotes}/ --format="%(refname:short)") &&
+  branch=$(echo "$branches" |
+           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+  git branch -d $(echo "$branch" | sed "s/.* //" | sed "s/^origin\///")
+}
+
 # fcoc - checkout git commit
 fcoc() {
   local commits commit
