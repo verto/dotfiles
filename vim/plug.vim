@@ -3,7 +3,10 @@
  Plug 'tpope/vim-fugitive'
  Plug 'kien/ctrlp.vim'
  Plug 'ivalkeen/vim-ctrlp-tjump'
+
  Plug 'altercation/vim-colors-solarized'
+ Plug 'cseelus/vim-colors-lucid'
+
  Plug 'rking/ag.vim'
  Plug 'scrooloose/nerdtree'
 
@@ -110,16 +113,26 @@ Plug 'honza/vim-snippets'
 
  Plug 'elzr/vim-json'
  Plug 'pangloss/vim-javascript'
+ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
  " typescript support
  " Plug 'neovim/node-host', { 'for': 'typescript', 'do': 'npm install -g neovim' }
  " Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
  " Plug 'mhartington/nvim-typescript', { 'for': 'typescript', 'do': './install.sh'}
  " For Denite features
- Plug 'Shougo/denite.nvim', { 'for': 'typescript' }
+Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+" For Denite features
+" Plug 'Shougo/denite.nvim'
+Plug 'Shougo/denite.nvim', { 'for': 'typescript' }
 
 
  " rust
  Plug 'rust-lang/rust.vim'
+
+ " print screen
+ Plug 'segeljakt/vim-silicon'
+
+Plug 'chriskempson/base16-vim'
 
  call plug#end()

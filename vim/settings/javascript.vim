@@ -7,3 +7,7 @@ augroup typescript_folding
     au!
     au FileType typescript setlocal foldmethod=syntax
 augroup END
+
+set filetype=json
+syntax on
+set foldmethod=syntax

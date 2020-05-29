@@ -63,11 +63,14 @@ nnoremap <silent> ,i :JavaImport<CR>
 nnoremap <silent> ,i :JavaImport<CR>
 
 syntax enable
-set background=dark
 colorscheme hybrid
+" colorscheme base16-ashes-verto
+" colorscheme lucid
 " colorscheme iceberg
 " colorscheme nord
-" colorscheme stellarized_dark
+" colorscheme solarized
+" set background=light
+set background=dark
 " let g:solarized_termcolors=256
 set clipboard=unnamed,unnamedplus
 

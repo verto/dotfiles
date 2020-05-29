@@ -1,1 +1,1 @@
-autocmd FileType typescript nnoremap<buffer> ,f :TSDef<cr>
+" autocmd FileType typescript nnoremap<buffer> ,f :TSDef<cr>

@@ -15,8 +15,6 @@ task :vim do
     ln -nfs $HOME/dev/dotfiles/vim $HOME/.vim
     ln -nfs $HOME/dev/dotfiles/vim/vimrc $HOME/.vimrc
   }
-
-  Rake::Task["vundle"].execute
 end
 
 desc "Vim Plug"
@@ -71,6 +69,7 @@ task :x do
   run %{
     ln -nfs $HOME/dev/dotfiles/Xresources.hybird $HOME/.Xresources
     ln -nfs $HOME/dev/dotfiles/xinitrc $HOME/.xinitrc
+    ln -nfs $HOME/dev/dotfiles/xsession $HOME/.xsession
   }
 end
 
