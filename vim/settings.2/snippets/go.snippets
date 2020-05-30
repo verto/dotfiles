@@ -1,0 +1,194 @@
+###########################################################################################
+#
+#  MODELS
+#
+###########################################################################################
+snippet model "model"
+package models
+
+import (
+	"gopkg.in/mgo.v2/bson"
+	"time"
+)
+
+type ${0} struct {
+	ID          bson.ObjectId `!v nr2char(96)`json:"id" bson:"_id,omitempty"`!v nr2char(96)`
+	CreatedAt   time.Time     `!v nr2char(96)`json:"created_at" bson:"created_at"`!v nr2char(96)`
+}
+endsnippet
+
+
+snippet mattr "model attribute"
+${1} ${2}        `!v nr2char(96)`json:"${0:$1}" bson:"${0:$1}"`!v nr2char(96)`
+endsnippet
+
+
+###########################################################################################
+#
+#  ENDPOINTS
+#
+###########################################################################################
+snippet	endpoint "endpoint"
+package endpoints
+
+import (
+	"fmt"
+	"github.com/gin-gonic/gin"
+)
+
+type `!p snip.rv = t[1].title()` interface {
+	${2}(c *gin.Context)
+}
+
+type ${1} struct {
+}
+
+func New`!p snip.rv = t[1].title()`() `!p snip.rv = t[1].title()` {
+	return &${0:$1}{
+	}
+}
+endsnippet
+
+
+snippet ecreate "endpoint Create"
+func (api *${1}) Create(c *gin.Context) {
+	var command commands.Create`!p snip.rv = t[1].title()`
+	err := c.BindJSON(&command)
+
+	err = command.Valid()
+
+	if err != nil {
+		log.Printf("bind json err: %s", err)
+		c.JSON(400, gin.H{"message": "Invalid Input"})
+		c.Abort()
+		return
+	}
+
+	${0}
+
+
+	c.JSON(200, nil)
+}
+endsnippet
+
+
+snippet eget "endpoint Get"
+func (api *${1}) Get(c *gin.Context) {
+
+	ID := c.Param("id")
+
+	${2}, err := api.${0:$2}.Get(ID)
+
+	if err != nil {
+		log.Printf("${0:$2} not found for ID=%s, error: %s", ID, err)
+		c.JSON(404, gin.H{"message": "${0:$2} not found"})
+		c.Abort()
+		return
+	}
+
+	c.JSON(200, ${0:$2})
+}
+endsnippet
+
+###########################################################################################
+#
+#  REPOSITORIES
+#
+###########################################################################################
+snippet repo "repository"
+package repos
+
+import (
+	"errors"
+	"gopkg.in/mgo.v2"
+	"gopkg.in/mgo.v2/bson"
+	"os"
+)
+
+type `!p snip.rv = t[1].title()` interface {
+	Create(${0:$2} models.${0:$2}) (id bson.ObjectId, err error)
+}
+
+type ${1} struct {
+	conn *db.DBConnection
+}
+
+func New`!p snip.rv = t[1].title()`(conn *db.DBConnection) `!p snip.rv = t[1].title()` {
+	return &${0:$1}{conn: conn}
+}
+
+func (repo *${0:$1}) coll() (collection *mgo.Collection) {
+	return repo.conn.Use(os.Getenv("DB_NAME"), "${0:$1}")
+}
+
+func (repo *${0:$1}) Create(${0:$2} models.${0:$2}) (id bson.ObjectId, err error) {
+	id = bson.NewObjectId()
+	${0:$2}.ID = id
+	err = repo.coll().Insert(${2})
+	return id, err
+}
+endsnippet
+
+snippet rfind "repository Find"
+func (repo *${0:$1}) Find(field string) (${0:$1} models.`!p snip.rv = t[1].title()`, err error) {
+	err = repo.coll().Find(bson.M{ "field": field}).One(&${1})
+	return ${0:$1}, err
+}
+endsnippet
+
+snippet rall "repository All"
+func (repo *${1}) All() (list []models.`!p snip.rv = t[1].title()`, err error) {
+	list = []models.`!p snip.rv = t[1].title()`{}
+	err = repo.coll().Find(bson.M{}).All(&list)
+	return list, err
+}
+endsnippet
+
+snippet rdel "repository Delete"
+func (repo *${1}) Delete(id string) (err error) {
+	if !bson.IsObjectIdHex(id) {
+		return errors.New("ID is invalid")
+	}
+
+	err = repo.coll().Remove(bson.M{"_id": bson.ObjectIdHex(id)})
+	return err
+}
+endsnippet
+
+snippet rupdate "repository Update"
+func (repo *${1}) Update(${2} models.`!p snip.rv = t[1].title()`) (err error) {
+	return repo.coll().UpdateId(${0:$2}.Id, ${0:$2})
+}
+endsnippet
+
+snippet rget "repository Get"
+func (repo *${1}) Get(id string) (${2} models.`!p snip.rv = t[1].title()`, err error) {
+	if !bson.IsObjectIdHex(id) {
+		return errors.New("ID is invalid")
+	}
+
+	err = repo.coll().Find(bson.M{"_id": bson.ObjectIdHex(id)}).One(&${0:$2})
+	return ${0:$2}, err
+}
+endsnippet
+
+###########################################################################################
+#
+#  SERVICES
+#
+###########################################################################################
+
+snippet	service "service"
+package services
+
+type `!p snip.rv = t[1].title()` interface {
+}
+
+type ${1} struct {
+}
+
+func New`!p snip.rv = t[1].title()`() `!p snip.rv = t[1].title()` {
+	return &${0:$1}{
+	}
+}
+endsnippet

@@ -1,0 +1,14 @@
+Generic Coc
+
+<C-space>  - trigger completion
+gd - god to definition
+gy - go to type definition
+gi - go to implementation
+gr - coc-references ?????
+<Leader>rn - rename symbol
+:OR - organize imports
+<space>a - cocList  diagnostics
+<space>e - cocoList extensions
+<C-f> - Find symbol of current document.
+<space>f - Search workspace symbols.
+

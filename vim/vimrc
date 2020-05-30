@@ -28,6 +28,7 @@ endif
 "
 set noswapfile
 set nobackup
+set nowritebackup
 set nowb
 
 " ================ Indentation ======================
@@ -39,6 +40,9 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set expandtab
+
+" Give more space for displaying messages.
+set cmdheight=2
 
 filetype plugin on
 filetype indent on
@@ -59,17 +63,9 @@ set foldlevel=99
 
 nnoremap <silent> \t :NERDTree<CR>
 nnoremap <silent> \T :NERDTreeFind<CR>
-nnoremap <silent> ,i :JavaImport<CR>
-nnoremap <silent> ,i :JavaImport<CR>
 
 syntax enable
 colorscheme hybrid
-" colorscheme base16-ashes-verto
-" colorscheme lucid
-" colorscheme iceberg
-" colorscheme nord
-" colorscheme solarized
-" set background=light
 set background=dark
 " let g:solarized_termcolors=256
 set clipboard=unnamed,unnamedplus
@@ -98,11 +94,3 @@ autocmd Filetype typescript set ts=2
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*/target/*,*/node_modules/*,*/bower_components/*
 set wildignore+=*/dist/*
-
-"let g:EclimCompletionMethod = 'omnifunc'
-"
-"if !exists('g:neocomplcache_force_omni_patterns')
-"    let g:neocomplcache_force_omni_patterns = {}
-"endif
-"let g:neocomplcache_force_omni_patterns.java = '\k\.\k*'
-"let g:neocomplcache_force_omni_patterns.scala = '\k\.\k*'

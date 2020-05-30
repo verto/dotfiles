@@ -1,6 +1,6 @@
-!Xft.dpi: 145
+Xft.dpi: 145
 !Xft.dpi: 125
-Xft.dpi: 95
+!Xft.dpi: 95
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintfull
@@ -13,7 +13,7 @@ XTerm*renderFont: true
 XTerm*scaleHeight: 1
 ! XTerm*faceName: DejaVu Sans Mono for Powerline
 XTerm*faceName: Source Code Pro
-XTerm*faceSize: 12
+XTerm*faceSize: 11
 XTerm*iconPixmap: /home/verto/dev/dotfiles/icons/code.xbm
 XTerm*selectToClipboard: true
 

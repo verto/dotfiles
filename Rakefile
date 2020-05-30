@@ -13,6 +13,7 @@ task :vim do
   puts "install vim config"
   run %{
     ln -nfs $HOME/dev/dotfiles/vim $HOME/.vim
+    ln -nfs $HOME/dev/dotfiles/nvim $HOME/.config/nvim
     ln -nfs $HOME/dev/dotfiles/vim/vimrc $HOME/.vimrc
   }
 end
