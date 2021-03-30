@@ -94,3 +94,6 @@ autocmd Filetype typescript set ts=2
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*/target/*,*/node_modules/*,*/bower_components/*
 set wildignore+=*/dist/*
+
+com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
+nnoremap = :FormatXML<Cr>

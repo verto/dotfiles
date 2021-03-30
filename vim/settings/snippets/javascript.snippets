@@ -96,3 +96,47 @@ then((${1}) => {
 	${0:${VISUAL}}
 })
 endsnippet
+
+# REACT
+snippet import "import"
+import ${1} from '${0}';
+endsnippet
+
+# new react native component
+snippet rnc "expand a new react native component" i
+import React from "react";
+import { SafeAreaLayout } from "../../components/SafeAreaLayout";
+import { StyleSheet } from "react-native";
+import { Text } from "@ui-kitten/components";
+
+const ${1} = () => {
+  return (
+    <SafeAreaLayout insets="top" style={styles.container}>
+	</SafeAreaLayout>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
+
+export default ${2:$1};
+endsnippet
+
+# new react native component
+snippet rc "expand a new react component" i
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const ${1} = () => {
+  return (
+  );
+};
+
+${2:$1}.propTypes = {
+};
+
+export default ${2:$1};
+endsnippet

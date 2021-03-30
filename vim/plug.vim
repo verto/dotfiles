@@ -20,6 +20,7 @@ Plug 'chriskempson/base16-vim'
 " coc
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
+Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-fugitive'
 " post gist
 Plug 'mattn/webapi-vim'
@@ -90,7 +91,6 @@ Plug 'sheerun/vim-polyglot'
 " Plug 'sebdah/vim-delve'
 " Plug 'jodosha/vim-godebug'
 " Plug 'KabbAmine/zeavim.vim'
-" Plug 'tpope/vim-rhubarb'
 " Plug 'Chun-Yang/vim-action-ag'
 " Plug 'janko-m/vim-test'
 " Plug 'tpope/vim-dispatch'

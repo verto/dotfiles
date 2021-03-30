@@ -60,3 +60,6 @@ nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 nnoremap <silent> <C-f>  :<C-u>CocList outline<cr>
 " Search workspace symbols.
 nnoremap <silent> <space>f  :<C-u>CocList -I symbols<cr>
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
