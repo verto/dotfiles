@@ -1,0 +1,5 @@
+#!/bin/bash
+
+xset r rate 150 50
+setxkbmap -layout us -variant intl
+
