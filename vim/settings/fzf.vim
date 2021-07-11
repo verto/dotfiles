@@ -1,5 +1,7 @@
 nnoremap <silent> ,t :Files<CR>
 nnoremap <silent> ,b :Buffers<CR>
+nnoremap <silent> ,gp :FindProtos(<c-r><c-w>)<CR>
+nnoremap <silent> ,tp :FindProtos<CR>
 nnoremap <silent> ,jt :Files test<CR>
 
 " commands window
@@ -14,6 +16,8 @@ function! s:build_quickfix_list(lines)
   copen
   cc
 endfunction
+
+command! -bang -nargs=* FindProtos call fzf#vim#grep("rg --no-ignore --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>)." -g '*.proto'", 1, fzf#vim#with_preview(), <bang>0)
 
 let g:fzf_action = {
   \ 'ctrl-q': function('s:build_quickfix_list'),

@@ -3,7 +3,7 @@ call plug#begin('~/.vim/bundle')
 " base
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'rking/ag.vim'
+" Plug 'rking/ag.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
