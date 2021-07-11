@@ -18,6 +18,12 @@ task :vim do
   }
 end
 
+task :vimspector do
+  run %{
+    git clone https://github.com/puremourning/vimspector ~/dev/dotfiles/vim/pack/vimspector/opt/vimspector
+  }
+end
+
 desc "Vim Plug"
 task :vim_plug do
   puts "intall vim-plug"
@@ -79,6 +85,8 @@ task :git do
   puts "install git configs"
   run %{
     ln -nfs $HOME/dev/dotfiles/gitconfig $HOME/.gitconfig
+    ln -nfs $HOME/dev/dotfiles/gitignore $HOME/.gitignore
+    ln -nfs $HOME/dev/dotfiles/fdignore $HOME/.fdignore
   }
 end
 

@@ -1,5 +1,6 @@
 vim/bundle/
 vim/autoload/
 vim/eclim/
+vim/pack/
 vim/plugin/*
 

@@ -2,6 +2,9 @@ nnoremap <silent> ,t :Files<CR>
 nnoremap <silent> ,b :Buffers<CR>
 nnoremap <silent> ,jt :Files test<CR>
 
+" commands window
+nmap <silent> <Leader>C :Commands<CR>
+
 " This is the default exta rkey bindings
 let g:fzf_action = { 'ctrl-t': 'tab split', 'ctrl-x': 'split', 'ctrl-v': 'vsplit' }
 

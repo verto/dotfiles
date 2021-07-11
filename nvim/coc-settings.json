@@ -10,8 +10,12 @@
       }
     }
   },
-  "eslint.filetypes": ["javascript"],
   "typescript.suggestionActions.enabled": false,
   "javascript.suggestionActions.enabled": false,
-  "go.enable": true
+  "metals.enable": true,
+  "metals.statusBarEnabled": true,
+  "codeLens.enable": true,
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.infoSign": "!"
 }

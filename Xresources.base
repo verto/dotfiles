@@ -10,11 +10,16 @@ Xft.rgba: rgb
 
 XTerm.termName: xterm-256color
 XTerm*renderFont: true
-XTerm*scaleHeight: 1
-! XTerm*faceName: DejaVu Sans Mono for Powerline
-XTerm*faceName: Source Code Pro
-XTerm*faceSize: 11
-XTerm*iconPixmap: /home/verto/dev/dotfiles/icons/code.xbm
+XTerm*scaleHeight: 1.3
+!XTerm*faceName: DejaVu Sans Mono for Powerline
+!XTerm*faceName: Source Code Pro
+! XTerm*faceName: Inconsolata
+!XTerm*faceName: Fira Code
+!XTerm*faceName: Comic Code
+XTerm*faceName: Comic Code Ligatures
+! XTerm*faceName: Anonymous Pro
+XTerm*faceSize: 10
+XTerm*iconPixmap:r/home/verto/dev/dotfiles/icons/code.xbm
 XTerm*selectToClipboard: true
 
 XTerm.vt100.saveLines: 6096

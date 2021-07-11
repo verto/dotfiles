@@ -19,7 +19,7 @@ set cursorline
 set hidden
 
 " =============== Vim Plug Initialization ===============
-" " This loads all the plugins specified in ~/.vim/plug.vim
+" " This loads the plugins specified in ~/.vim/plug.vim
 if filereadable(expand("~/.vim/plug.vim"))
   source ~/.vim/plug.vim
 endif
@@ -36,13 +36,13 @@ set nowb
 set autoindent
 set smartindent
 set smarttab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 set expandtab
 
 " Give more space for displaying messages.
-set cmdheight=2
+" #set cmdheight=1
 
 filetype plugin on
 filetype indent on
@@ -65,21 +65,25 @@ nnoremap <silent> \t :NERDTree<CR>
 nnoremap <silent> \T :NERDTreeFind<CR>
 
 syntax enable
-colorscheme hybrid
-set background=dark
-" let g:solarized_termcolors=256
-set clipboard=unnamed,unnamedplus
+set foldmethod=syntax
+set foldenable
 
-"
 " If you have vim >=8.0 or Neovim >= 0.1.5
 if (has("termguicolors"))
  set termguicolors
 endif
 
+" colorscheme gruvbox
+set background=dark
+
+colorscheme base16-default-dark
+" colorscheme challenger_deep
+
+" let g:solarized_termcolors=256
+set clipboard=unnamed,unnamedplus
+
 " For Neovim 0.1.3 and 0.1.4
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-
-
 
 so ~/.vim/settings.vim
 
@@ -87,13 +91,7 @@ autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype vue setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-
-autocmd Filetype typescript set softtabstop=2
-autocmd Filetype typescript set sw=2
-autocmd Filetype typescript set ts=2
+autocmd Filetype typescript set sw=2 ts=2 softtabstop=2
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*/target/*,*/node_modules/*,*/bower_components/*
 set wildignore+=*/dist/*
-
-com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
-nnoremap = :FormatXML<Cr>

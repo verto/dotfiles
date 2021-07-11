@@ -46,15 +46,15 @@ echo "[rbenv] $TIMEDIFF"
 #    exec tmux
 #fi
 #
-export SCALA_HOME=/home/verto/dev/scala
+export SCALA_HOME=/home/verto/dev/scala/current
+export SBT_HOME=/home/verto/dev/sbt
 export VIM_HOME=/home/verto/dev/vim
-#export JAVA_HOME=/home/verto/dev/jdk
-export JAVA_HOME=/usr/lib/jvm/default
+export JAVA_HOME=/home/verto/dev/java/jdk
+#export JAVA_HOME=/usr/lib/jvm/default
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
-export PATH=$VIM_HOME/bin:$PATH:$SCALA_HOME/bin:$JAVA_HOME/bin
-export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin:$HOME/dev/jet
+export PATH=/usr/local/go/bin:$HOME/go/bin:$HOME/dev/jet:$PATH
 export GOPATH=/home/verto/dev/projects/go
 export VERTO_SCRIPTS=/home/verto/dev/dotfiles/bin
 export PASS_HOME=/home/verto/dev/op
@@ -63,8 +63,15 @@ export FLUTTER_DIR=/home/verto/dev/flutter/flutter
 
 export FZF_DEFAULT_COMMAND='fd --type f'
 
-export PATH=$PATH:$GOPATH/bin:$PASS_HOME:$CARGO_BIN:$VERTO_SCRIPTS:$FLUTTER_DIR/bin
+export NPM_BIN=/home/verto/.asdf/installs/nodejs/12.16.2/.npm/bin/
+export PATH=$GOPATH/bin:$PASS_HOME:$CARGO_BIN:$VERTO_SCRIPTS:$FLUTTER_DIR/bin:$NPM_BIN:$PATH
 export DASHT_DOCSETS_DIR=~/.local/share/Zeal/Zeal/docsets
+
+export VSCODE_DIR=/home/verto/dev/vscode
+export PATH="$VSCODE_DIR/bin:$PATH"
+
+export DENO_INSTALL="/home/verto/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 STARTTIME=`date +%s.%N`
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -75,4 +82,13 @@ echo "[fzf] $TIMEDIFF"
 
 . $HOME/.asdf/asdf.sh
 
-. $HOME/.asdf/completions/asdf.bash
+source <(kubectl completion zsh)
+
+
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit
+compinit
+
+export PATH=$VIM_HOME/bin:$SCALA_HOME/bin:$JAVA_HOME/bin:$SBT_HOME/bin:$PATH

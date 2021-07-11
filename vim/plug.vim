@@ -13,12 +13,16 @@ Plug 'morhetz/gruvbox'
 Plug 'w0ng/vim-hybrid'
 Plug 'nightsense/stellarized'
 Plug 'cocopon/iceberg.vim'
-Plug 'cocopon/lightline-hybrid.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'chriskempson/base16-vim'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'cocopon/lightline-hybrid.vim'
+Plug 'nolo18/base16lightline'
 
 " coc
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+" debug metals
+Plug 'puremourning/vimspector'
 
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-fugitive'
@@ -38,6 +42,7 @@ Plug 'Raimondi/delimitMate'
 " langs
  "langs pack
 Plug 'sheerun/vim-polyglot'
+" Plug 'pseewald/vim-anyfold'
 
 
 
