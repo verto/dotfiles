@@ -15,6 +15,7 @@ task :vim do
     ln -nfs $HOME/dev/dotfiles/vim $HOME/.vim
     ln -nfs $HOME/dev/dotfiles/nvim $HOME/.config/nvim
     ln -nfs $HOME/dev/dotfiles/vim/vimrc $HOME/.vimrc
+    ln -nfs $HOME/dev/dotfiles/ideavimrc $HOME/.ideavimrc
   }
 end
 

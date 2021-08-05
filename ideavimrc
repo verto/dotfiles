@@ -1,0 +1,54 @@
+""" Map leader to space ---------------------
+let mapleader="\"
+
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set easymotion
+set textobj-entire
+set ReplaceWithRegister
+set NERDTree
+
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+set clipboard=unnamed,unnamedplus
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" Navigate between idea tabs: <Ctrl+Tab>
+
+map <leader>f <Plug>(easymotion-s)
+map <leader>e <Plug>(easymotion-f)
+
+" rename element
+map <leader>r <Action>(RenameElement)
+" display error/warring popup
+map ! <Action>(ShowErrorDescription)
+" file structure(to find methods  inside of the file)
+map ,f <Action>(FileStructurePopup)
+
+" find references in the files
+map ,r <Action>(FindInPath)
+
+" NERDTree Open/Close
+map <leader>t :NERDTreeToggle<CR>
+map <leader>T :NERDTreeFind<CR>
+
+map K <Action>(QuickJavaDoc)
+
+map ,c :action GotoClass<CR>
+map ,t :action GotoFile<CR>
+
+" go to implementation
+map gi <Action>(GotoImplementation)
+
+" find usage global or local
+map ,ug <Action>(FindUsages)
+map ,ul <Action>(FindUsagesInFile)
