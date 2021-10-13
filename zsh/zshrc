@@ -7,38 +7,20 @@
 
 # Source Prezto.
 
-STARTTIME=`date +%s.%N`
-
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-ENDTIME=`date +%s.%N`
-TIMEDIFF=`echo "$ENDTIME - $STARTTIME" | bc | awk -F"." '{print $1"."substr($2,1,3)}'`
-echo "[zprezto] $TIMEDIFF"
-
 # Customize to your needs...
-STARTTIME=`date +%s.%N`
-
 for config_file (~/dev/dotfiles/zsh/*.zsh) source $config_file
-
-ENDTIME=`date +%s.%N`
-TIMEDIFF=`echo "$ENDTIME - $STARTTIME" | bc | awk -F"." '{print $1"."substr($2,1,3)}'`
-echo "[zsh files] $TIMEDIFF"
-
-STARTTIME=`date +%s.%N`
 
 if [[ -s "$HOME/.rbenv" ]]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
 
-ENDTIME=`date +%s.%N`
-TIMEDIFF=`echo "$ENDTIME - $STARTTIME" | bc | awk -F"." '{print $1"."substr($2,1,3)}'`
-echo "[rbenv] $TIMEDIFF"
-
 # added by travis gem
-[ -f /home/verto/.travis/travis.sh ] && source /home/verto/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 #tmux attach &> /dev/null
 
@@ -46,39 +28,34 @@ echo "[rbenv] $TIMEDIFF"
 #    exec tmux
 #fi
 #
-export SCALA_HOME=/home/verto/dev/scala/current
-export SBT_HOME=/home/verto/dev/sbt
-export VIM_HOME=/home/verto/dev/vim
-export JAVA_HOME=/home/verto/dev/java/jdk
-#export JAVA_HOME=/usr/lib/jvm/default
+export SCALA_HOME=$HOME/dev/scala/current
+export SBT_HOME=$HOME/dev/sbt
+export VIM_HOME=$HOME/dev/vim
+#export JAVA_HOME=$HOME/dev/jdk/11.48.21/zulu-11.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export PATH=/usr/local/go/bin:$HOME/go/bin:$HOME/dev/jet:$PATH
-export GOPATH=/home/verto/dev/projects/go
-export VERTO_SCRIPTS=/home/verto/dev/dotfiles/bin
-export PASS_HOME=/home/verto/dev/op
-export CARGO_BIN=/home/verto/.cargo/bin
-export FLUTTER_DIR=/home/verto/dev/flutter/flutter
+export GOPATH=$HOME/dev/projects/go
+export VERTO_SCRIPTS=$HOME/dev/dotfiles/bin
+export PASS_HOME=$HOME/dev/op
+export CARGO_BIN=$HOME/.cargo/bin
+export FLUTTER_DIR=$HOME/dev/flutter/flutter
 
 export FZF_DEFAULT_COMMAND='fd --type f'
 
-export NPM_BIN=/home/verto/.asdf/installs/nodejs/12.16.2/.npm/bin/
+export NPM_BIN=$HOME/.asdf/installs/nodejs/12.16.2/.npm/bin/
 export PATH=$GOPATH/bin:$PASS_HOME:$CARGO_BIN:$VERTO_SCRIPTS:$FLUTTER_DIR/bin:$NPM_BIN:$PATH
 export DASHT_DOCSETS_DIR=~/.local/share/Zeal/Zeal/docsets
 
-export VSCODE_DIR=/home/verto/dev/vscode
+export VSCODE_DIR=$HOME/dev/vscode
 export PATH="$VSCODE_DIR/bin:$PATH"
 
-export DENO_INSTALL="/home/verto/.deno"
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-STARTTIME=`date +%s.%N`
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-ENDTIME=`date +%s.%N`
-TIMEDIFF=`echo "$ENDTIME - $STARTTIME" | bc | awk -F"." '{print $1"."substr($2,1,3)}'`
-echo "[fzf] $TIMEDIFF"
 
 . $HOME/.asdf/asdf.sh
 
@@ -92,3 +69,11 @@ autoload -Uz compinit
 compinit
 
 export PATH=$VIM_HOME/bin:$SCALA_HOME/bin:$JAVA_HOME/bin:$SBT_HOME/bin:$PATH
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+export PATH="/Users/verto/.local/share/solana/install/active_release/bin:$PATH"

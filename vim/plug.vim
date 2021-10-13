@@ -18,6 +18,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'cocopon/lightline-hybrid.vim'
 Plug 'nolo18/base16lightline'
+Plug 'shapeoflambda/dark-purple.vim'
 
 " coc
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }

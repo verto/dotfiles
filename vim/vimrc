@@ -76,7 +76,8 @@ endif
 " colorscheme gruvbox
 set background=dark
 
-colorscheme base16-default-dark
+" colorscheme base16-default-dark
+colorscheme dark_purple
 " colorscheme challenger_deep
 
 " let g:solarized_termcolors=256
