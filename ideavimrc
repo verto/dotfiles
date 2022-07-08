@@ -1,5 +1,5 @@
 """ Map leader to space ---------------------
-let mapleader="\"
+let mapleader=""
 
 """ Plugins  --------------------------------
 set surround
@@ -52,3 +52,5 @@ map gi <Action>(GotoImplementation)
 " find usage global or local
 map ,ug <Action>(FindUsages)
 map ,ul <Action>(FindUsagesInFile)
+
+map ,b <Action>(Switcher)

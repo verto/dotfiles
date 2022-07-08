@@ -32,7 +32,11 @@ export SCALA_HOME=$HOME/dev/scala/current
 export SBT_HOME=$HOME/dev/sbt
 export VIM_HOME=$HOME/dev/vim
 #export JAVA_HOME=$HOME/dev/jdk/11.48.21/zulu-11.jdk/Contents/Home
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home
+export JDK8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home
+export JDK11_HOME=/Users/verto/Library/Java/JavaVirtualMachines/azul-11.0.13/Contents/Home
+export JDK17_HOME=/Users/verto/Library/Java/JavaVirtualMachines/azul-17.0.1-1/Contents/Home
+export JAVA_HOME=$JDK11_HOME
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
@@ -57,7 +61,7 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-. $HOME/.asdf/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 source <(kubectl completion zsh)
 
@@ -74,6 +78,12 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
-export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
 export PATH="/Users/verto/.local/share/solana/install/active_release/bin:$PATH"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+export HOSTNAME=vertoplanet
