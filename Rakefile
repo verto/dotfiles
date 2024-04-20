@@ -3,42 +3,18 @@ require 'fileutils'
 
 desc "Yay! mount my env"
 task :install do
-  ["vim", "zsh", "tmux", "fonts"].each do |task|
+  ["nvim", "zsh", "tmux", "git"].each do |task|
     Rake::Task[task].execute
   end
 end
 
-desc "vim configs"
-task :vim do
-  puts "install vim config"
+desc "neovim configs"
+task :nvim do
+  puts "install neovim config"
   run %{
-    ln -nfs $HOME/dev/dotfiles/vim $HOME/.vim
     ln -nfs $HOME/dev/dotfiles/nvim $HOME/.config/nvim
-    ln -nfs $HOME/dev/dotfiles/vim/vimrc $HOME/.vimrc
     ln -nfs $HOME/dev/dotfiles/ideavimrc $HOME/.ideavimrc
   }
-end
-
-task :vimspector do
-  run %{
-    git clone https://github.com/puremourning/vimspector ~/dev/dotfiles/vim/pack/vimspector/opt/vimspector
-  }
-end
-
-desc "Vim Plug"
-task :vim_plug do
-  puts "intall vim-plug"
-  run %{
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  }
-  puts "open the vim and execute :PlugInstall to install the bundles."
-end
-
-desc "eclim install, requirements: [~/dev/eclim-eclipse, ~/dev/eclim_2.6.0.jar]"
-task :eclim do
-  puts "installing eclim"
-  exec %{ java -Dvim.files=$HOME/.vim -Declipse.home=$HOME/dev/eclim-eclipse -jar $HOME/dev/eclim_2.6.0.jar install }
 end
 
 desc "zsh configs"
@@ -71,16 +47,6 @@ task :tmux do
   }
 end
 
-desc "x config"
-task :x do
-  puts "install x configs"
-  run %{
-    ln -nfs $HOME/dev/dotfiles/Xresources.hybird $HOME/.Xresources
-    ln -nfs $HOME/dev/dotfiles/xinitrc $HOME/.xinitrc
-    ln -nfs $HOME/dev/dotfiles/xsession $HOME/.xsession
-  }
-end
-
 desc "gitconfig"
 task :git do
   puts "install git configs"
@@ -88,16 +54,6 @@ task :git do
     ln -nfs $HOME/dev/dotfiles/gitconfig $HOME/.gitconfig
     ln -nfs $HOME/dev/dotfiles/gitignore $HOME/.gitignore
     ln -nfs $HOME/dev/dotfiles/fdignore $HOME/.fdignore
-  }
-end
-
-desc "fonts"
-task :fonts do
-  puts "install fonts"
-  run %{
-    sudo cp $HOME/dev/dotfiles/fonts/*.ttf /usr/share/fonts/TTF/
-    sudo cp $HOME/dev/dotfiles/fonts/*.otf /usr/share/fonts/OTF/
-    fc-cache
   }
 end
 

@@ -47,6 +47,9 @@ export PASS_HOME=$HOME/dev/op
 export CARGO_BIN=$HOME/.cargo/bin
 export FLUTTER_DIR=$HOME/dev/flutter/flutter
 
+export GCLOUD_HOME=$HOME/dev/gcloud
+export PATH="$GCLOUD_HOME/bin:$PATH"
+
 export FZF_DEFAULT_COMMAND='fd --type f'
 
 export NPM_BIN=$HOME/.asdf/installs/nodejs/12.16.2/.npm/bin/

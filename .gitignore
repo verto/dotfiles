@@ -3,4 +3,6 @@ vim/autoload/
 vim/eclim/
 vim/pack/
 vim/plugin/*
-
+nvim/lazy-lock.json
+./.clangd
+./compile_components.json
