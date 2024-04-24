@@ -18,6 +18,8 @@ vim.opt.clipboard = 'unnamedplus'
 -- Enable break indent
 vim.opt.breakindent = true
 
+vim.opt.wrap = false
+
 -- Save undo history
 vim.opt.undofile = true
 
@@ -125,6 +127,8 @@ require('lazy').setup({
   require 'verto.plugins.auto-save',
   require 'verto.plugins.trouble',
   require 'verto.plugins.tsc',
+  require 'verto.plugins.vim-fugitive',
+  require 'verto.plugins.vim-rhubarb',
 }, {})
 
 -- The line beneath this is called `modeline`. See `:help modeline`

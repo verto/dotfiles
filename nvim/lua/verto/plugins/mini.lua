@@ -21,7 +21,7 @@ return { -- Collection of various small independent plugins/modules
     --  and try some other statusline plugin
     local statusline = require 'mini.statusline'
     -- set use_icons to true if you have a Nerd Font
-    statusline.setup { use_icons = false }
+    statusline.setup { use_icons = true }
 
     -- You can configure sections in the statusline by overriding their
     -- default behavior. For example, here we set the section for
