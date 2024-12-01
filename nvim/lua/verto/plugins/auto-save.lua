@@ -10,7 +10,7 @@ return {
     local utils = require("auto-save.utils.data")
 
     -- only auto save for scala file types
-    if utils.not_in(fn.getbufvar(buf, "&filetype"), {'scala', 'sbt'}) then
+    if utils.not_in(fn.getbufvar(buf, "&filetype"), {'scala', 'sbt', 'java'}) then
       return false
     end
     return true
