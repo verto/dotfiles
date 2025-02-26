@@ -147,7 +147,19 @@ return { -- LSP Configuration & Plugins
     local servers = {
       clangd = {},
       -- gopls = {},
-      -- pyright = {},
+      pyright = {
+        settings = {
+          python = {
+            disableOrganizeImports = true,
+            analysis = {
+              diagnosticSeverityOverrides = {
+                reportAttributeAccessIssue = "none",
+                reportIncompatibleVariableOverride = false,
+              },
+            },
+          },
+        },
+      },
       -- rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --

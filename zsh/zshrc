@@ -35,7 +35,7 @@ export VIM_HOME=$HOME/dev/vim
 export JDK8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_291.jdk/Contents/Home
 export JDK11_HOME=/Users/verto/Library/Java/JavaVirtualMachines/azul-11.0.13/Contents/Home
 export JDK17_HOME=/Users/verto/Library/Java/JavaVirtualMachines/azul-17.0.1-1/Contents/Home
-export JAVA_HOME=$JDK11_HOME
+export JAVA_HOME=$JDK17_HOME
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -64,8 +64,6 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
 source <(kubectl completion zsh)
 
 
@@ -90,3 +88,5 @@ export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 export HOSTNAME=vertoplanet
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PATH="$HOME/.asdf/shims:$PATH"
