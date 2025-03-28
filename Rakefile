@@ -3,7 +3,7 @@ require 'fileutils'
 
 desc "Yay! mount my env"
 task :install do
-  ["nvim", "zsh", "tmux", "git"].each do |task|
+  ["nvim", "zsh", "tmux", "git", "asdf"].each do |task|
     Rake::Task[task].execute
   end
 end
@@ -54,6 +54,14 @@ task :git do
     ln -nfs $HOME/dev/dotfiles/gitconfig $HOME/.gitconfig
     ln -nfs $HOME/dev/dotfiles/gitignore $HOME/.gitignore
     ln -nfs $HOME/dev/dotfiles/fdignore $HOME/.fdignore
+  }
+end
+
+desc "asdfrc conf"
+task :asdfrc do
+  puts "install asdfrc conf"
+  run %{
+    ln -nfs $HOME/dev/dotfiles/asdfrc $HOME/.asdfrc
   }
 end
 

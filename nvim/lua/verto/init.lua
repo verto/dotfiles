@@ -148,6 +148,7 @@ require('lazy').setup({
   require 'verto.plugins.vim-rhubarb',
   require 'verto.plugins.virtcolumn',
   require 'verto.plugins.nvim-jdtls',
+  require 'verto.plugins.vim-test',
 }, {})
 
 -- The line beneath this is called `modeline`. See `:help modeline`

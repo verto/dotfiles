@@ -82,3 +82,5 @@ alias sp='sbt package'
 alias sclp='sbt clean package'
 
 alias vim="nvim"
+
+alias awsume=". /Users/everton.cardoso/.asdf/installs/python/3.10.3/bin/awsume"

@@ -26,6 +26,12 @@ function prompt_skwp_precmd {
   if (( $+functions[ruby-info] )); then
     ruby-info
   fi
+
+  # Get node information
+  if (( $+functions[node-info] )); then
+    node-info
+  fi
+
 }
 
 PROMPT_DEFAULT_END=❯
@@ -76,12 +82,13 @@ function prompt_skwp_setup {
 
   # ruby info (rvm, rbenv)
   zstyle ':prezto:module:ruby:info:version' format '[%v]'
+  zstyle ':prezto:module:node:info:version' format '[%v]'
 
   PROMPT='
 ${__PROMPT_SKWP_COLORS[9]}%n%f@${__PROMPT_SKWP_COLORS[7]}%m%f ${__PROMPT_SKWP_COLORS[6]}%~%f $git_info[prompt]
 ${PROMPT_DEFAULT_END} '
 
-  RPROMPT='%F{grey}${ruby_info[version]}'
+  RPROMPT='%F{grey}${node_info[version]}'
 }
 
 prompt_skwp_setup "$@"

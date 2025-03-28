@@ -11,7 +11,7 @@ return {
         -- Bold cursorline number.
         bold_number = true,
         -- Available styles: 'dark', 'light'.
-        theme = 'light',
+        theme = 'dark',
         -- Blending the cursorline bg with the buffer bg.
         blend = 1.5,
       },
